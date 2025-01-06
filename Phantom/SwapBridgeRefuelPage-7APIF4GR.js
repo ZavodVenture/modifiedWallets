@@ -1,0 +1,20 @@
+import{a as h,b as s,d as f,e as R}from"./chunk-W3ZRPNOX.js";import{Ma as P,z as w}from"./chunk-JD6NH5K6.js";import"./chunk-KJMFZ7XX.js";import"./chunk-WAFQTOB5.js";import"./chunk-CCUXU2GU.js";import"./chunk-SIDJ2NRC.js";import"./chunk-7UTGLKC7.js";import"./chunk-AHRYSG4W.js";import"./chunk-QEXGR5WT.js";import"./chunk-P5LBFEHG.js";import"./chunk-S24UABH5.js";import"./chunk-MHQYYZ7C.js";import"./chunk-X3ESGVCB.js";import"./chunk-QINBGLLG.js";import"./chunk-SHAEZV7V.js";import"./chunk-IWGMKDQE.js";import"./chunk-DERIAD33.js";import"./chunk-EGXLQXDH.js";import"./chunk-CCQRCL2K.js";import"./chunk-75L54KUM.js";import"./chunk-ROF5SDVA.js";import"./chunk-Q67X6MF4.js";import"./chunk-IVMV7P4T.js";import"./chunk-ZON27MKP.js";import"./chunk-SMVAXKUF.js";import"./chunk-HPOS2V3B.js";import"./chunk-XYJX6G2K.js";import"./chunk-MTQZ2G7K.js";import"./chunk-W27Z2YZM.js";import"./chunk-2NGYUYTC.js";import"./chunk-H3FFS4GT.js";import"./chunk-4VDZJDFB.js";import"./chunk-XJTFMD4C.js";import"./chunk-GMBAJ6CC.js";import"./chunk-PTZMRZUV.js";import"./chunk-VQVTLSDS.js";import{j as a}from"./chunk-OKP6DFCI.js";import{Aa as C,o as r,rb as u}from"./chunk-WIQ4WVKX.js";import{wa as x}from"./chunk-SD2LXVLD.js";import"./chunk-UCBZOSRF.js";import"./chunk-F3RUX6TF.js";import"./chunk-HRJWTAGT.js";import"./chunk-LURFXJDV.js";import"./chunk-V5T43K7V.js";import"./chunk-MNXYIK2W.js";import"./chunk-QALJXKGR.js";import"./chunk-MHOQBMVI.js";import"./chunk-GQEPK4C4.js";import"./chunk-BTKBODVJ.js";import"./chunk-7ZN4F6J4.js";import"./chunk-OUYKWOVO.js";import"./chunk-WFPABEAU.js";import"./chunk-THLBAMDB.js";import"./chunk-LDMZMUWY.js";import"./chunk-X2SBUKU4.js";import"./chunk-OXFZHPMY.js";import"./chunk-OYGO47TI.js";import"./chunk-SLQBAOEK.js";import"./chunk-MZZEJ42N.js";import"./chunk-E3NPIRHS.js";import{m as c}from"./chunk-56SJOU6P.js";import"./chunk-ALUTR72U.js";import"./chunk-N7UFQNLW.js";import"./chunk-L3A2KHJO.js";import"./chunk-4P36KWOF.js";import{a as I}from"./chunk-7X4NV6OJ.js";import"./chunk-UNDMYLJW.js";import{f as v,h as b,n as B}from"./chunk-3KENBVE7.js";b();B();var e=v(I());var V=r.div`
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+`,H=r.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+`,T=r(u).attrs({size:28,lineHeight:32,weight:600,color:"#fff"})`
+  margin: 12px 0 4px;
+`,k=r(u).attrs({size:16,lineHeight:18,weight:400,color:"#999"})`
+  padding: 0 20px;
+`,L=r.div`
+  margin-bottom: 10px;
+`,D=()=>{let{handleHideModalVisibility:i}=P(),{setRefuelEnabled:d,...n}=x(),t=(0,e.useCallback)(()=>{i("bridgeRefuel")},[i]),p=(0,e.useCallback)(l=>{d(l),t()},[t,d]);return{...n,enableRefuel:p,hideBridgeRefuel:t}},E=e.default.memo(({symbol:i,balance:d,refuelAmount:n,uiRefuelAmount:t,estimatedCost:p,refuelEnabled:l,enableRefuel:m,hideBridgeRefuel:y,isFetchingQuote:g})=>{let{t:o}=c();return e.default.createElement(V,null,e.default.createElement(L,null,e.default.createElement(H,null,e.default.createElement(w,{leftButton:{type:"close",onClick:y}},o("bridgeRefuelTitle")),e.default.createElement(C,null),e.default.createElement(T,null,o("bridgeRefuelEnable")),e.default.createElement(k,null,o("bridgeRefuelDescription"))),e.default.createElement(h,{roundedTop:!0,roundedBottom:!0},e.default.createElement(s,{label:o("bridgeRefuelLabelBalance",{symbol:i})},e.default.createElement(f,{color:"#EB3742"},d)),e.default.createElement(s,{label:o("bridgeRefuelLabelReceive"),isLoading:g},e.default.createElement(f,{color:l&&n?"#21E56F":void 0},l&&n?t:"-")),e.default.createElement(s,{label:o("bridgeRefuelLabelFee"),isLoading:g},e.default.createElement(f,null,l&&n?p:"")))),e.default.createElement("div",null,e.default.createElement(a,{theme:"default",onClick:()=>m(!1)},o("bridgeRefuelDismiss")),e.default.createElement(R,{gap:10}),e.default.createElement(a,{theme:"primary",onClick:()=>m(!0)},o("bridgeRefuelEnable"))))}),S=()=>{let i=D();return e.default.createElement(E,{...i})},U=S;export{S as SwapBridgeRefuelPage,U as default};
+//# sourceMappingURL=SwapBridgeRefuelPage-7APIF4GR.js.map

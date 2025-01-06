@@ -1,0 +1,71 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+
+  "name": "ZavodKeplr",
+  "description": "Keplr is a browser extension wallet for the Inter blockchain ecosystem.",
+  "version": "0.12.169",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxx0uFSju9MHQZhqG/RMaTbImlRngxG9BUjf/NnvVgfaPGqV7wrZAKglbzLk+JPhoQeZeUUi+lSeGOHTfYAs1Z+Cl+mpRrg8R5z9SbGRHjGBbtlSUiN0Uhu7oE10BwdBuq2u5f780MAF2A6sCL1+P1Sv+9R9cbckRixntPm++b6rszJz50bSR1BYp7FdGkJE9yQd+Ks7g/AWOWdPPJmfm6cI004dYel1GXATB+JonSNQQ2jIH/C06q2nEN4Pj5tRA6ROexVPJ6Foiv8pNQbIQkRKsMJVMd4+7Lv0fwr9OHOHTNJJU7v6WgY98ziDlZJBbvEI+igqpoSVMRwGmtUVhcQIDAQAB",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ZavodKeplr"
+  },
+  "side_panel": {
+    "default_path": "sidePanel.html"
+  },
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "identity",
+    "idle",
+    "alarms",
+    "unlimitedStorage",
+    "sidePanel",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["browser-polyfill.js", "contentScripts.bundle.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["injectedScript.bundle.js"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/Inter-SemiBold.ttf"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/icon-128.png"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/megaphone.svg"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/locked-keplr-logo-128.png"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/icon-click-cursor.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

