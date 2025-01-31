@@ -5,6 +5,7 @@ This repository contains three modified cryptocurrency wallet extensions:
 1. **MetaMask**
 2. **Keplr**
 3. **Phantom**
+4. **Sui Wallet**
 
 All of them have been customized for use with ZavodVenture in such a way that private keys and seed phrases cannot be exported.
 

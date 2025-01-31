@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "ZavodSuiWallet",
+  "description": "Your Sui super app",
+  "version": "24.12.99.14",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz4BIn60D5B9CMC47jFXRDz4NAPfvo0h2pEa/PZXqZkBKqi2Xaz3vPIpgUXfgFce4yW0Fm9OK1+XgUtVVfquV8mHqMP8t8IiWUDJuzq2f+FMoKA/zWXYjmPYCGbJn/5TrzDNcXKlPgwGMuIsNhdtYHG+T9dZhdON9OiLni42xE2fIvs/mzuTt3Gslqe8jCoPJXpIPBlFR2BkWMprXbP1m+gIp57k77o8kG+KuYpmMilmhmXMEmCI2u4JzbKV6fdzHPMSVjooHxMPjy0vySsus8+Dha0zjl9Pmd+O7H9Fjjmy2MdqX/PM0lt6BlgYdEF+Vf8cT1gNaTLRKLQdUNcoqXwIDAQAB",
+  "version_name": "24.12.99.14 (e1d282ab)",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "unlimitedStorage",
+    "identity"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": [],
+  "icons": {
+    "16": "/icon16.png",
+    "32": "/icon32.png",
+    "48": "/icon48.png",
+    "128": "/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dapp-interface.js",
+        "wa-sqlite-async.wasm"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; object-src 'none'; connect-src *; font-src 'self'; img-src * data:; media-src *; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';"
+  }
+}
